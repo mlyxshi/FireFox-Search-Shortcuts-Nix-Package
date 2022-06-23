@@ -1,0 +1,25 @@
+{
+	"name": "Nix Package Search",
+	"description": "Add Nix Package to your search engine",
+	"version": "0.1",
+	"manifest_version": 2,
+	"applications": {
+		"gecko": {
+			"id": "nix.package@search",
+			"strict_min_version": "64.0"
+		}
+	},
+	"icons": {
+		"16": "favicon.png"
+	},
+	"web_accessible_resources": [
+		"favicon.png"
+	],
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"name": "Nix Package",
+			"keyword": "@nix",
+			"search_url": "https://search.nixos.org/packages?&query={searchTerms}"
+		}
+	}
+}
